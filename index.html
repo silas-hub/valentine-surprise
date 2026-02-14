@@ -55,11 +55,11 @@
 </head>
 <body>
 
-<h1>Will You Be My Valentine? 💖</h1>
+<h1>Will You Be Mr.Who's Valentine? </h1>
 <p id="message">Choose wisely 👀</p>
 
 <div class="buttons">
-  <button id="yes" onclick="sayYes()">Yes 💘</button>
+  <button id="yes" onclick="sayYes()">Yes 💪/button>
   <button id="no" onmouseover="moveNo()">No 😅</button>
 </div>
 
@@ -67,25 +67,25 @@
   let yesSize = 20;
   let messages = [
     "Are you sure? 🤨",
-    "That seems illegal 😭",
-    "Try again...",
-    "Why you playing hard to get? 👀",
-    "This button is shy 🏃‍♂️",
-    "Okay now you're just testing me 😤"
+    "Try again... 😭",
+    "Try harder...",
+    "Tired yet? 👀",
+    "Khana khayeu timile?",
+    "Thakeu hola, Pani peu 💦🚰"
   ];
 
   let count = 0;
 
   function moveNo() {
     const noBtn = document.getElementById("no");
-    const container = document.querySelector(".buttons");
 
-    const maxX = container.clientWidth - noBtn.offsetWidth;
-    const maxY = container.clientHeight - noBtn.offsetHeight;
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
 
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
+    noBtn.style.position = "fixed";
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 
@@ -100,8 +100,8 @@
 
   function sayYes() {
     document.body.innerHTML = `
-      <h1>Best Decision Ever 😌💖</h1>
-      <p>Get ready for the best Valentine's ever 🌹</p>
+      <h1>And so...our story begins 😊</h1>
+      <p>Good Night and Sweet dreams.</p>
     `;
   }
 </script>
