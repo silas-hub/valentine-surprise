@@ -3,55 +3,64 @@
 <head>
   <title>Important Question 👀</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-      text-align: center;
-    }
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+  h1 {
+    font-size: 7vw; /* Responsive size */
+    margin-bottom: 15px;
+  }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
+  p {
+    font-size: 4.5vw; /* Bigger on mobile */
+    margin-bottom: 30px;
+  }
 
-    .buttons {
-      position: relative;
-      width: 400px;
-      height: 200px;
-    }
+  .buttons {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+  }
 
-    button {
-      font-size: 20px;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+  button {
+    font-size: 5vw; /* Bigger buttons */
+    padding: 15px 35px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-    #yes {
-      background-color: #ff4d6d;
-      color: white;
-    }
+  #yes {
+    background-color: #ff4d6d;
+    color: white;
+  }
 
-    #no {
-      background-color: #555;
-      color: white;
-      position: absolute;
-    }
-  </style>
+  #no {
+    background-color: #555;
+    color: white;
+    position: absolute;
+  }
+
+  /* Desktop adjustment */
+  @media (min-width: 768px) {
+    h1 { font-size: 40px; }
+    p { font-size: 18px; }
+    button { font-size: 20px; }
+  }
+</style>
 </head>
 <body>
 
@@ -99,11 +108,12 @@
   }
 
   function sayYes() {
-    document.body.innerHTML = `
-      <h1>Yes it is then 😎 And so...our story begins 😊</h1>
-      <p>Dhanyabad Timilai.</p>
-    `;
-  }
+  document.body.innerHTML = `
+    <h1>And so… our story begins. 💫</h1>
+    <p>Chapter One starts now.</p>
+    <p>Dhanyabad timilai. 🤍</p>
+  `;
+}
 </script>
 
 </body>
