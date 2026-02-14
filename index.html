@@ -18,27 +18,27 @@
   }
 
   h1 {
-    font-size: 7vw; /* Responsive size */
-    margin-bottom: 15px;
+    font-size: 10vw; /* Much bigger heading for mobile */
+    margin-bottom: 20px;
   }
 
   p {
-    font-size: 4.5vw; /* Bigger on mobile */
-    margin-bottom: 30px;
+    font-size: 6vw; /* Bigger text */
+    margin-bottom: 35px;
   }
 
   .buttons {
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 200px;
+    height: 250px; /* slightly taller for bigger buttons */
   }
 
   button {
-    font-size: 5vw; /* Bigger buttons */
-    padding: 15px 35px;
+    font-size: 6vw; /* Bigger buttons */
+    padding: 20px 40px;
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -56,20 +56,20 @@
 
   /* Desktop adjustment */
   @media (min-width: 768px) {
-    h1 { font-size: 40px; }
-    p { font-size: 18px; }
-    button { font-size: 20px; }
+    h1 { font-size: 50px; }
+    p { font-size: 24px; }
+    button { font-size: 24px; padding: 18px 45px; }
   }
-</style>
+  </style>
 </head>
 <body>
 
-<h1>Will you be Mr.Who's valentine? </h1>
+<h1>Will you be Mr.Who's 14? 💖</h1>
 <p id="message">Choose wisely 👀</p>
 
 <div class="buttons">
   <button id="yes" onclick="sayYes()">Yes 🙂</button>
-  <button id="no" onmouseover="moveNo()">No 😅</button>
+  <button id="no" onmouseover="moveNo()">No 🙃/button>
 </div>
 
 <script>
@@ -79,7 +79,7 @@
     "Try again... 😭",
     "Try harder...",
     "Tired yet? 👀",
-    "Khana khayeu timile?",
+    "Khana khayeu ta timile?",
     "Thakeu hola, Pani peu 💦🚰"
   ];
 
@@ -87,7 +87,6 @@
 
   function moveNo() {
     const noBtn = document.getElementById("no");
-
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
@@ -108,12 +107,12 @@
   }
 
   function sayYes() {
-  document.body.innerHTML = `
-    <h1> Congratulations! </h1>
-    <p>You just won yourself a bouquet of roses! </p>
-    <p>Dhanyabad timilai for saying Yes. 🤍</p>
-  `;
-}
+    document.body.innerHTML = `
+      <h1>Congratulations! </h1>
+      <p>You just won yourself a bouquet of roses! </p>
+      <p>Dhanyabad timilai 🤍</p>
+    `;
+  }
 </script>
 
 </body>
