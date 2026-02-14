@@ -18,12 +18,12 @@
   }
 
   h1 {
-    font-size: 20vw; /* Much bigger heading for mobile */
+    font-size: 12vw; /* big but not crazy on mobile */
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 10vw; /* Bigger text */
+    font-size: 6vw; /* readable text */
     margin-bottom: 35px;
   }
 
@@ -31,12 +31,12 @@
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 250px; /* slightly taller for bigger buttons */
+    height: 250px; 
   }
 
   button {
-    font-size: 10vw; /* Bigger buttons */
-    padding: 20px 40px;
+    font-size: 7vw; /* big buttons */
+    padding: 18px 40px;
     border: none;
     border-radius: 16px;
     cursor: pointer;
@@ -64,8 +64,8 @@
 </head>
 <body>
 
-<h1>Will you be Mr.Who's 14? 💖</h1>
-<p id="message">Choose wisely 👀</p>
+<h1>Will you be accepting a bouquet of roses? ❤️ </h1>
+<p id="message">Please choose wisely 👀</p>
 
 <div class="buttons">
   <button id="yes" onclick="sayYes()">Yes 🙂</button>
@@ -73,10 +73,10 @@
 </div>
 
 <script>
-  let yesSize = 30;
+  let yesSize = 24; // starting font size for Yes button
   let messages = [
     "Are you sure? 🤨",
-    "Try again... 😭",
+    "Try again...",
     "Try harder...",
     "Tired yet? 👀",
     "Khana khayeu ta timile?",
@@ -100,7 +100,7 @@
     document.getElementById("message").innerText =
       messages[count % messages.length];
 
-    yesSize += 5;
+    yesSize += 4; // grow Yes button gradually
     document.getElementById("yes").style.fontSize = yesSize + "px";
 
     count++;
@@ -108,9 +108,9 @@
 
   function sayYes() {
     document.body.innerHTML = `
-      <h1>Congratulations! </h1>
+      <h1> Congratulations! </h1>
       <p>You just won yourself a bouquet of roses! </p>
-      <p>Dhanyabad timilai 🤍</p>
+      <p>Dhanyabad timilai for saying Yes. 🤍</p>
     `;
   }
 </script>
